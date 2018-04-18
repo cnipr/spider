@@ -1,0 +1,57 @@
+SELECT * FROM patent_after_2007 p limit 100;
+
+SELECT count(0) FROM patent_after_2007 where shencha is not null;
+
+SELECT count(0) FROM patent_after_2007;
+
+create table patent_after_2007_05_242979 as SELECT * FROM patent_after_2007 where shencha is not null;
+
+create table patent_after_2007_06_60w as SELECT * FROM patent_after_2007 limit 0,600000;
+
+delete from patent_after_2007 where shencha is not null;
+
+
+===================================================================================
+
+SELECT id,an,shencha FROM patent_after_2007_06_60w p limit 2000;
+
+SELECT count(0) FROM patent_after_2007_06_60w where shencha is not null;
+
+create table patent_after_2007_06_513700 as SELECT * FROM patent_after_2007_06_60w where shencha is not null;
+
+delete from patent_after_2007_06_60w where shencha is not null;
+
+===================================================================================================
+create table patent_after_2007_13_30w as SELECT * FROM patent_after_2007 limit 1900000,300000;
+create table patent_after_2007_14_30w as SELECT * FROM patent_after_2007 limit 2200000,300000;
+create table patent_after_2007_15_30w as SELECT * FROM patent_after_2007 limit 2500000,300000;
+
+create table patent_after_2007_16_30w as SELECT * FROM patent_after_2007 limit 2800000,300000;
+create table patent_after_2007_17_30w as SELECT * FROM patent_after_2007 limit 3100000,300000;
+create table patent_after_2007_18_30w as SELECT * FROM patent_after_2007 limit 3400000,300000;
+create table patent_after_2007_19_30w as SELECT * FROM patent_after_2007 limit 3700000,300000;
+
+create table patent_after_2007_20_30w as SELECT * FROM patent_after_2007 limit 4000000,300000;
+create table patent_after_2007_21_30w as SELECT * FROM patent_after_2007 limit 4300000,300000;
+create table patent_after_2007_22_30w as SELECT * FROM patent_after_2007 limit 4600000,300000;
+create table patent_after_2007_23_30w as SELECT * FROM patent_after_2007 limit 4900000,300000;
+create table patent_after_2007_24_30w as SELECT * FROM patent_after_2007 limit 5200000,300000;
+
+create table patent_after_2007_25_30w as SELECT * FROM patent_after_2007 limit 5500000,300000;
+create table patent_after_2007_26_30w as SELECT * FROM patent_after_2007 limit 5800000,300000;
+create table patent_after_2007_27_30w as SELECT * FROM patent_after_2007 limit 6100000,300000;
+create table patent_after_2007_28_30w as SELECT * FROM patent_after_2007 limit 6400000,300000;
+create table patent_after_2007_29_30w as SELECT * FROM patent_after_2007 limit 6700000,300000;
+create table patent_after_2007_30_30w as SELECT * FROM patent_after_2007 limit 7000000,300000;
+create table patent_after_2007_31_30w as SELECT * FROM patent_after_2007 limit 7300000,300000;
+
+
+
+ALTER TABLE  patent_after_2007_24_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_25_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_26_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_27_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_28_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_29_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_30_30w ADD PRIMARY KEY(id);
+ALTER TABLE  patent_after_2007_31_30w ADD PRIMARY KEY(id);
